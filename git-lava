@@ -129,7 +129,7 @@ hotflow() {
     pretty "git pull" "in develop branch"
     git pull
 
-    LAST_VERSION=$(git log --merges --grep="Merge branch '$HOTFIX_PREFIX/$PREFIX[0-9]*\.[0-9]*\.[0-9]*' into $DEVELOP_BRANCH" --format="%s" -n 1 | sed "s/Merge branch '$HOTFIX_PREFIX\/$PREFIX\([0-9]*\.[0-9]*\.[0-9]*\)' into $DEVELOP_BRANCH/\1/")
+    LAST_VERSION=$(git log --merges --grep="Merge branch '$HOTFIX_PREFIX/$PREFIX[0-9]*\.[0-9]*\.[0-9]*'" --format="%s" -n 1 | sed "s/Merge branch '$HOTFIX_PREFIX\/$PREFIX\([0-9]*\.[0-9]*\.[0-9]*\)'/\1/")
 
     if [ "$CURRENT_RELEASE_VERSION" == "" ]
     then
