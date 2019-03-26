@@ -238,7 +238,7 @@ hotflow() {
 
 
     pretty "git flow hotfix finish $TAG_NAME"
-    git flow hotfix finish $TAG_NAME
+    git flow hotfix finish --notag $TAG_NAME
 
     if [ $? -ne 0 ]
     then
