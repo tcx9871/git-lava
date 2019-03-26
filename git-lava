@@ -37,7 +37,7 @@ hotflow() {
     GIT_ROOT=$(git rev-parse --show-toplevel)
     cd "$GIT_ROOT"
 
-    if ! which git-flow > /dev/null 2>&1
+    if ! git flow version > /dev/null 2>&1
     then
         echo "git-flow is not installed. Refer https://github.com/nvie/gitflow/wiki/Installation"
         exit 1
