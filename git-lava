@@ -4,7 +4,7 @@
 main() {
     if [ "$1" == "-Xed" ]
     then
-        if [ $(basename "$3") == "TAG_EDITMSG" ]
+        if [ "$(basename "$3")" == "TAG_EDITMSG" ]
         then
             sed -e "1s/.*/$2/" -i "" "$3"
         fi
